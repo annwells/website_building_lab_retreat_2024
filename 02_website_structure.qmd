@@ -1,0 +1,62 @@
+---
+title: "Establishing the Bones of a Website"
+sidebar: tutorial
+format:
+  html:
+    code-tools: 
+      source: true
+      toggle: true
+    code-fold: true
+    page-layout: full
+---
+::: {.column-screen}
+
+:::: grid
+::: g-col-6
+## For RStudio
+
+There are only a few steps to build the bones of a website.
+
+1.  Open RStudio
+
+2.  Click **File** and then **New Project**.
+
+![Adapted from quarto.org](rstudio-project-new-directory.png)
+
+3.  Click **Quarto website**.
+
+![Adapted from quarto.org](rstudio-project-website.png)
+
+4.  Pick a name for your project and choose where to save it. Choose knitr as your engine and check all three boxes.
+
+![](create-quarto-website.png)
+
+5.  Click create project and you should see this:
+
+![](basic-quarto-project-template.png)
+
+6. To preview website click the build tab in the upper right quadrant or type **quarto preview --render all --no-watch-inputs --no-browse** in the console.
+:::
+
+::: g-col-6
+## For Visual Studio Code
+
+1.  Open Visual Studio Code
+
+2.  push shift + command + p to open up the VS code panel
+
+![](VScode_panel.png)
+
+3.  Type Quarto: Create project and choose website project
+
+![](choose-website-project-vscode.png)
+
+4.  Choose where you want to store your project and click new folder to name your project. Then click choose Project Directory. You should see these files below:
+
+![](vscode_quarto_project_template.png)
+
+5. Type **quarto preview --render all --no-watch-inputs --no-browse** in bash in the terminal to preview the website. Push command and click the link list to preview the website.
+:::
+::::
+
+:::

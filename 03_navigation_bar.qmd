@@ -1,0 +1,63 @@
+---
+title: "Setting up the navigation bar"
+lightbox: true
+sidebar: tutorial
+engine: knitr
+highlight-style: radical
+code-annotations: select
+format:
+  html:
+    code-tools: 
+      source: true
+      toggle: true
+    code-fold: show
+---
+
+The navigation bar is the main location where
+
+
+```{yaml}
+---
+project:
+  type: website # <1>
+
+website: # <2>
+  title: "Palmer Penguins" # <3>
+  page-navigation: true # <4>
+  page-footer: # <5>
+      center: | # <5>
+        ![](palmerpenguins.png){width=20%} # <5>
+      right: Palmer Penguins adapted by Ann Wells # <5>
+  navbar: # <6>
+    background:  "#ceb6db" #"#d1dbe8" #"#013377" # <7>
+    foreground: "#350d56" #<7>
+    logo: JAX_LOGO_no_words.png # <8>
+    left: # <9>
+      - text: "Home" # <9>
+        file: index.qmd # <9>
+      - text: "Who are the penguins?" # <9>
+        href: 01_who_are_the_penguins.qmd # <9>
+
+format: # <10>
+  html: # <10>
+    theme: cerulean # <10>
+    highlight-style: textmate # <10>
+    css: styles.css # <10>
+    toc: true # <10>
+    
+
+editor: visual # <11>
+---
+```
+
+1. This determines the type of output you want.
+2. This is needed to establish the structure of the website.
+3. This is the title of your website and it will show in the upper left corner.
+4. page-navigation is not necessary but it will add next and previous page buttons to the bottom of your site if you have sidebar navigation.
+5. The page footer will allow you to add links, authorship, logos, copyrights, etc. and these will display on all pages of the site.
+6. The navbar is needed to establish website structure.
+7. background and foreground will change the navigation bar color and the text color of the navigation bar.
+8. logo will add an image to the left of the website title.
+9. left establishes the directory structure on the left side of the navigation bar and subsequent drop down menus. If you add right then that will establish the directory structure or links to the right side of the navigation bar.
+10. format establishes the desired output, color style of the output, the highlight style when the cursor hovers over links, set the table of contents to true or false globally, and locate the css file for specialized styling.
+11. Allows the ability to visualize the formatting without rendering the file or website.

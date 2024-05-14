@@ -1,0 +1,82 @@
+---
+title: "Hosting Your Website"
+lightbox: true
+engine: knitr
+sidebar: tutorial
+format:
+  html:
+    code-tools: 
+      source: true
+      toggle: true
+    code-fold: true
+---
+
+## Hosting on Carterdev server
+
+Hosting on the carterdev server is great for internal projects but requires vpn access. To do this follow these steps:
+
+**1.** Go to terminal in your RStudio or VScode IDE.
+
+**2.** Copy over _site folder using this command:
+
+```{bash}
+## remove echo if copying code
+echo scp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername
+```
+
+**3.** push enter and you will be asked to enter your password. This is your JAX password.
+
+**4.** Files should start copying over and you're done!
+
+To access the site you will use the following url:
+
+http://carterdev:3838/foldername/_site
+
+where foldername correpsonds to your project name.
+
+## Hosting on Goggle Cloud Platform
+
+Hosting on the GCP will require a service ticket, which can be accessed [here](https://jax.service-now.com/jax?id=sc_cat_item&sys_id=3197986887e83d90320ada473cbb356b&sysparm_category=ac87b60087acb990320ada473cbb35c1){target="_blank"}
+
+To request a new project you will need these items:
+
+**1.** Request type **Create a new GCP project**
+
+**2.** Research project name (they list the naming convention on the request)
+
+**3.** Billing information
+
+**4.** Environment (Development, staging, production) 
+
+::: {.callout-note}
+This can be discussed with RIT before submission, if it's not clear which to choose.
+:::
+
+**5.** User Access 
+
+::: {.callout-note}
+This is where you will list everyone that you want to have access to your project. The people listed here also need to have a GCP account.
+:::
+
+There are two avenues for GCP hosted site: public and private. In both cases RIT needs to be contacted first and the instructions above need to be performed, however, you will need to know if you want a public or private website because they will need to set up your project differently to accomodate for the different levels of security.
+
+**For public sites:**
+
+If you want to host your site publicly then you will ask that RIT set up a project that can be seen publicly but remains private until you are ready. This means that until you are ready to share your site no one will have access. Once you are ready to make your site public contact RIT again and they will change the setting to public and the url will be:
+
+https://storage.googleapis.com/bucketname/index.html
+
+To fill your project with your website you will do two things:
+
+1. Create a bucket within the project.
+
+2. Copy over all of the material that is inside your _site folder but not the folder itself into the bucket.
+
+3. Done!
+
+**For private sites:**
+Private sites are more complicated and take longer to set up (over a month!). Per RIT, "In general a Identity-Aware Proxy (IAP) with a load balancer can do a private access to a GCP hosted site". However, if a private site is absolutely needed then they are happy to do so. Once that is complete then you would follow the same steps as above. The only people than can access your private site are JAX employees.
+
+::: {.callout-important}
+In the cases of hosting on the carterdev server or privately on the GCP, **no one outside of JAX** will have access. This is something I have currently asked about to find options and solutions. Hosting publicly allows anyone with the url to see your website.
+:::

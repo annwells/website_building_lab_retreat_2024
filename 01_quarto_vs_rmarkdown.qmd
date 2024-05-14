@@ -1,0 +1,27 @@
+---
+title: "Quarto vs. Rmarkdown"
+lightbox: true
+sidebar: tutorial
+format:
+  html:
+    code-tools: 
+      source: true
+      toggle: true
+    code-fold: true
+---
+
+## Quarto
+
+Quarto is the new rmarkdown. It isn't much different as far as syntax, if you are familiar with Rmarkdown; however, Rmarkdown requires several packages to run and several packages to create different types of documents.
+
+![Adapted from Mine Cetinkaya Rundel's hello-quarto presentation](rmd_ecosystem.png)
+
+On the other hand, quarto is both agnostic and a singular package. This means that quarto does not require RStudio or R to run and can utilize files from multiple coding languages. Additionally, quarto only requires quarto to create multiple document types, streamlining the dissemination process.
+
+![Artwork by @allison_horst Adapted from Mine Cetinkaya Rundel's hello-quarto presentation](many-lang-qmd-to-output.png)
+
+![Artwork by @allison_horst Adapted from Mine Cetinkaya Rundel's hello-quarto presentation](horst_qmd_render_schema.png)
+
+Quarto also lets you organize your files into folders, which allows for better organization of different data analyses within a project while Rmarkdown required all .rmd files be placed in the primary directory.
+
+Rmarkdown will be maintained indefinitely; however, no new features will be developed. Quarto is the new documentation package and will continue to be developed and improved upon for the foreseeable future. All feature requests can be made [here](https://github.com/quarto-dev) and documentation for current features can be found [here](https://quarto.org)

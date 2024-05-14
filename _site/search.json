@@ -1,0 +1,179 @@
+[
+  {
+    "objectID": "03_navigation_bar.html",
+    "href": "03_navigation_bar.html",
+    "title": "Setting up the navigation bar",
+    "section": "",
+    "text": "The navigation bar is the main location where\n\n\nCode\n---\nproject:\n1  type: website\n\n2website:\n3  title: \"Palmer Penguins\"\n4  page-navigation: true\n5  page-footer:\n      center: |\n        ![](palmerpenguins.png){width=20%}\n      right: Palmer Penguins adapted by Ann Wells\n6  navbar:\n7    background:  \"#ceb6db\" #\"#d1dbe8\" #\"#013377\"\n    foreground: \"#350d56\"\n8    logo: JAX_LOGO_no_words.png\n9    left:\n      - text: \"Home\"\n        file: index.qmd\n      - text: \"Who are the penguins?\"\n        href: 01_who_are_the_penguins.qmd\n\n10format:\n  html:\n    theme: cerulean\n    highlight-style: textmate\n    css: styles.css\n    toc: true\n    \n\n11editor: visual\n---\n\n\n\n1\n\nThis determines the type of output you want.\n\n2\n\nThis is needed to establish the structure of the website.\n\n3\n\nThis is the title of your website and it will show in the upper left corner.\n\n4\n\npage-navigation is not necessary but it will add next and previous page buttons to the bottom of your site if you have sidebar navigation.\n\n5\n\nThe page footer will allow you to add links, authorship, logos, copyrights, etc. and these will display on all pages of the site.\n\n6\n\nThe navbar is needed to establish website structure.\n\n7\n\nbackground and foreground will change the navigation bar color and the text color of the navigation bar.\n\n8\n\nlogo will add an image to the left of the website title.\n\n9\n\nleft establishes the directory structure on the left side of the navigation bar and subsequent drop down menus. If you add right then that will establish the directory structure or links to the right side of the navigation bar.\n\n10\n\nformat establishes the desired output, color style of the output, the highlight style when the cursor hovers over links, set the table of contents to true or false globally, and locate the css file for specialized styling.\n\n11\n\nAllows the ability to visualize the formatting without rendering the file or website.\n\n\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Tutorial for building a website",
+      "Setting up the navigation bar"
+    ]
+  },
+  {
+    "objectID": "06_hosting_website.html",
+    "href": "06_hosting_website.html",
+    "title": "Hosting Your Website",
+    "section": "",
+    "text": "Hosting on the carterdev server is great for internal projects but requires vpn access. To do this follow these steps:\n1. Go to terminal in your RStudio or VScode IDE.\n2. Copy over _site folder using this command:\n\n\nCode\n## remove echo if copying code\necho scp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\nscp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\n3. push enter and you will be asked to enter your password. This is your JAX password.\n4. Files should start copying over and you’re done!\nTo access the site you will use the following url:\nhttp://carterdev:3838/foldername/_site\nwhere foldername correpsonds to your project name.",
+    "crumbs": [
+      "Tutorial for building a website",
+      "Hosting Your Website"
+    ]
+  },
+  {
+    "objectID": "06_hosting_website.html#hosting-on-carterdev-server",
+    "href": "06_hosting_website.html#hosting-on-carterdev-server",
+    "title": "Hosting Your Website",
+    "section": "",
+    "text": "Hosting on the carterdev server is great for internal projects but requires vpn access. To do this follow these steps:\n1. Go to terminal in your RStudio or VScode IDE.\n2. Copy over _site folder using this command:\n\n\nCode\n## remove echo if copying code\necho scp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\nscp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\n3. push enter and you will be asked to enter your password. This is your JAX password.\n4. Files should start copying over and you’re done!\nTo access the site you will use the following url:\nhttp://carterdev:3838/foldername/_site\nwhere foldername correpsonds to your project name.",
+    "crumbs": [
+      "Tutorial for building a website",
+      "Hosting Your Website"
+    ]
+  },
+  {
+    "objectID": "06_hosting_website.html#hosting-on-goggle-cloud-platform",
+    "href": "06_hosting_website.html#hosting-on-goggle-cloud-platform",
+    "title": "Hosting Your Website",
+    "section": "Hosting on Goggle Cloud Platform",
+    "text": "Hosting on Goggle Cloud Platform\nHosting on the GCP will require a service ticket, which can be accessed here\nTo request a new project you will need these items:\n1. Request type Create a new GCP project\n2. Research project name (they list the naming convention on the request)\n3. Billing information\n4. Environment (Development, staging, production)\n\n\n\n\n\n\nNote\n\n\n\nThis can be discussed with RIT before submission, if it’s not clear which to choose.\n\n\n5. User Access\n\n\n\n\n\n\nNote\n\n\n\nThis is where you will list everyone that you want to have access to your project. The people listed here also need to have a GCP account.\n\n\nThere are two avenues for GCP hosted site: public and private. In both cases RIT needs to be contacted first and the instructions above need to be performed, however, you will need to know if you want a public or private website because they will need to set up your project differently to accomodate for the different levels of security.\nFor public sites:\nIf you want to host your site publicly then you will ask that RIT set up a project that can be seen publicly but remains private until you are ready. This means that until you are ready to share your site no one will have access. Once you are ready to make your site public contact RIT again and they will change the setting to public and the url will be:\nhttps://storage.googleapis.com/bucketname/index.html\nTo fill your project with your website you will do two things:\n\nCreate a bucket within the project.\nCopy over all of the material that is inside your _site folder but not the folder itself into the bucket.\nDone!\n\nFor private sites: Private sites are more complicated and take longer to set up (over a month!). Per RIT, “In general a Identity-Aware Proxy (IAP) with a load balancer can do a private access to a GCP hosted site”. However, if a private site is absolutely needed then they are happy to do so. Once that is complete then you would follow the same steps as above. The only people than can access your private site are JAX employees.\n\n\n\n\n\n\nImportant\n\n\n\nIn the cases of hosting on the carterdev server or privately on the GCP, no one outside of JAX will have access. This is something I have currently asked about to find options and solutions. Hosting publicly allows anyone with the url to see your website.",
+    "crumbs": [
+      "Tutorial for building a website",
+      "Hosting Your Website"
+    ]
+  },
+  {
+    "objectID": "07_resources.html",
+    "href": "07_resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Quarto Documentation\nGet Started with Quarto tutorial (Tom Mock)\nPresentations with Quarto\nGet Started with Quarto (YouTube)\nMaking Beautiful Presentations and Documents with Quarto (YouTube)\nThese are a few of my favorite things about Quarto (YouTube)\n\n\n\nRmarkdown Documentation\nMaking an Rmarkdown website"
+  },
+  {
+    "objectID": "07_resources.html#quarto",
+    "href": "07_resources.html#quarto",
+    "title": "Resources",
+    "section": "",
+    "text": "Quarto Documentation\nGet Started with Quarto tutorial (Tom Mock)\nPresentations with Quarto\nGet Started with Quarto (YouTube)\nMaking Beautiful Presentations and Documents with Quarto (YouTube)\nThese are a few of my favorite things about Quarto (YouTube)"
+  },
+  {
+    "objectID": "07_resources.html#rmarkdownblogdown",
+    "href": "07_resources.html#rmarkdownblogdown",
+    "title": "Resources",
+    "section": "",
+    "text": "Rmarkdown Documentation\nMaking an Rmarkdown website"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Building websites for Data Dissemination, Reproducibility, and Transparency",
+    "section": "",
+    "text": "It’s easier to talk with collaborators and share results in an intuitive way.\nIt’s easier to understand the outcome of an experiment and organize data in a way that will be accessible years after the project is complete.\nThe websites don’t require traditional biologists to understand your code but empower them to understand the steps of analysis that have been taken to arrive at an outcome creating richer discussions.\nAt the end of a project they can easily be publicly hosted for other researchers to investigate the entire analysis that was completed, not just what was presented in the accompanying journal article.\n\nTurning qmd files:\n\n\n\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation\n\n\nInto this:\n\n\n\nExample homepage of a data resource"
+  },
+  {
+    "objectID": "index.html#why-should-we-build-websites-for-data-dissemination",
+    "href": "index.html#why-should-we-build-websites-for-data-dissemination",
+    "title": "Building websites for Data Dissemination, Reproducibility, and Transparency",
+    "section": "",
+    "text": "It’s easier to talk with collaborators and share results in an intuitive way.\nIt’s easier to understand the outcome of an experiment and organize data in a way that will be accessible years after the project is complete.\nThe websites don’t require traditional biologists to understand your code but empower them to understand the steps of analysis that have been taken to arrive at an outcome creating richer discussions.\nAt the end of a project they can easily be publicly hosted for other researchers to investigate the entire analysis that was completed, not just what was presented in the accompanying journal article.\n\nTurning qmd files:\n\n\n\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation\n\n\nInto this:\n\n\n\nExample homepage of a data resource"
+  },
+  {
+    "objectID": "index.html#requirements-for-tutorial-as-of-5-7-24",
+    "href": "index.html#requirements-for-tutorial-as-of-5-7-24",
+    "title": "Building websites for Data Dissemination, Reproducibility, and Transparency",
+    "section": "Requirements for tutorial as of 5-7-24",
+    "text": "Requirements for tutorial as of 5-7-24\n\nFor RStudio\n\nMake sure that you have Quarto version &gt;1.4.\nIf you do not then download the latest version here\nRestart RStudio\nCheck the quarto version in the terminal with the following command:\n\n\nquarto --version\n\n1.4.554\n\n\n\n\nFor Visual Studio Code\n\nDownload the quarto extension here.\nOpen Visual Studio Code\ncheck the Quarto version in the terminal with the following command:\n\n\nquarto --version\n\n1.4.554\n\n\n\nGo to the quarto extension and click settings and then extension settings.\nUnder Quarto › Render: Preview Type change the location to external.\n\nIf you need help with this step feel free to contact Ann Wells for help."
+  },
+  {
+    "objectID": "index.html#other-packages-that-will-be-needed-to-build-the-practice-site",
+    "href": "index.html#other-packages-that-will-be-needed-to-build-the-practice-site",
+    "title": "Building websites for Data Dissemination, Reproducibility, and Transparency",
+    "section": "Other packages that will be needed to build the practice site",
+    "text": "Other packages that will be needed to build the practice site\n\nlibrary(here)\nlibrary(palmerpenguins)\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "04_page_yaml.html",
+    "href": "04_page_yaml.html",
+    "title": "Setting up the page yaml",
+    "section": "",
+    "text": "Each page within your website will have its own yaml information at the top. A yaml section is required, however, no line of code is necessary within the yaml. If the yaml is empty then the page will default to the specifications set in the _quarto.yml.\nThe page yaml can make each page’s style unique. There you can specify how you visualize code, images, the table of contents, etc. Below is a simple yaml. We will create a yaml for a page later.\n\n\nCode\n---\ntitle: \"The Palmer Penguins Data\"\n1lightbox: true\nformat:\n  html:\n    code-tools: \n2      source: true\n3      toggle: true\n4    code-fold: true\n---\n\n\n\n1\n\nLightbox allows you to click on any output image and it will show a larger image.\n\n2\n\nsource set to true will allow anyone to copy the source code for a page in the upper right corner of the page.\n\n3\n\ntoggle will create a dropdown menu at the top right corner for code and give options for whatever code you want to show.\n\n4\n\ncode-fold will allow you to show code for each output throughout your page.\n\n\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Tutorial for building a website",
+      "Setting up the page yaml"
+    ]
+  },
+  {
+    "objectID": "02_website_structure.html",
+    "href": "02_website_structure.html",
+    "title": "Establishing the Bones of a Website",
+    "section": "",
+    "text": "There are only a few steps to build the bones of a website.\n\nOpen RStudio\nClick File and then New Project.\n\n\n\n\nAdapted from quarto.org\n\n\n\nClick Quarto website.\n\n\n\n\nAdapted from quarto.org\n\n\n\nPick a name for your project and choose where to save it. Choose knitr as your engine and check all three boxes.\n\n\n\nClick create project and you should see this:\n\n\n\nTo preview website click the build tab in the upper right quadrant or type quarto preview –render all –no-watch-inputs –no-browse in the console.\n\n\n\n\n\nOpen Visual Studio Code\npush shift + command + p to open up the VS code panel\n\n\n\nType Quarto: Create project and choose website project\n\n\n\nChoose where you want to store your project and click new folder to name your project. Then click choose Project Directory. You should see these files below:\n\n\n\nType quarto preview –render all –no-watch-inputs –no-browse in bash in the terminal to preview the website. Push command and click the link list to preview the website.",
+    "crumbs": [
+      "Tutorial for building a website",
+      "Establishing the Bones of a Website"
+    ]
+  },
+  {
+    "objectID": "02_website_structure.html#for-rstudio",
+    "href": "02_website_structure.html#for-rstudio",
+    "title": "Establishing the Bones of a Website",
+    "section": "",
+    "text": "There are only a few steps to build the bones of a website.\n\nOpen RStudio\nClick File and then New Project.\n\n\n\n\nAdapted from quarto.org\n\n\n\nClick Quarto website.\n\n\n\n\nAdapted from quarto.org\n\n\n\nPick a name for your project and choose where to save it. Choose knitr as your engine and check all three boxes.\n\n\n\nClick create project and you should see this:\n\n\n\nTo preview website click the build tab in the upper right quadrant or type quarto preview –render all –no-watch-inputs –no-browse in the console.",
+    "crumbs": [
+      "Tutorial for building a website",
+      "Establishing the Bones of a Website"
+    ]
+  },
+  {
+    "objectID": "02_website_structure.html#for-visual-studio-code",
+    "href": "02_website_structure.html#for-visual-studio-code",
+    "title": "Establishing the Bones of a Website",
+    "section": "",
+    "text": "Open Visual Studio Code\npush shift + command + p to open up the VS code panel\n\n\n\nType Quarto: Create project and choose website project\n\n\n\nChoose where you want to store your project and click new folder to name your project. Then click choose Project Directory. You should see these files below:\n\n\n\nType quarto preview –render all –no-watch-inputs –no-browse in bash in the terminal to preview the website. Push command and click the link list to preview the website.",
+    "crumbs": [
+      "Tutorial for building a website",
+      "Establishing the Bones of a Website"
+    ]
+  },
+  {
+    "objectID": "01_quarto_vs_rmarkdown.html",
+    "href": "01_quarto_vs_rmarkdown.html",
+    "title": "Quarto vs. Rmarkdown",
+    "section": "",
+    "text": "Quarto is the new rmarkdown. It isn’t much different as far as syntax, if you are familiar with Rmarkdown; however, Rmarkdown requires several packages to run and several packages to create different types of documents.\n\n\n\nAdapted from Mine Cetinkaya Rundel’s hello-quarto presentation\n\n\nOn the other hand, quarto is both agnostic and a singular package. This means that quarto does not require RStudio or R to run and can utilize files from multiple coding languages. Additionally, quarto only requires quarto to create multiple document types, streamlining the dissemination process.\n\n\n\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation\n\n\n\n\n\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation\n\n\nQuarto also lets you organize your files into folders, which allows for better organization of different data analyses within a project while Rmarkdown required all .rmd files be placed in the primary directory.\nRmarkdown will be maintained indefinitely; however, no new features will be developed. Quarto is the new documentation package and will continue to be developed and improved upon for the foreseeable future. All feature requests can be made here and documentation for current features can be found here\n\n\n\n\n\nAdapted from Mine Cetinkaya Rundel’s hello-quarto presentation\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation",
+    "crumbs": [
+      "Tutorial for building a website",
+      "Quarto vs. Rmarkdown"
+    ]
+  },
+  {
+    "objectID": "01_quarto_vs_rmarkdown.html#quarto",
+    "href": "01_quarto_vs_rmarkdown.html#quarto",
+    "title": "Quarto vs. Rmarkdown",
+    "section": "",
+    "text": "Quarto is the new rmarkdown. It isn’t much different as far as syntax, if you are familiar with Rmarkdown; however, Rmarkdown requires several packages to run and several packages to create different types of documents.\n\n\n\nAdapted from Mine Cetinkaya Rundel’s hello-quarto presentation\n\n\nOn the other hand, quarto is both agnostic and a singular package. This means that quarto does not require RStudio or R to run and can utilize files from multiple coding languages. Additionally, quarto only requires quarto to create multiple document types, streamlining the dissemination process.\n\n\n\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation\n\n\n\n\n\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation\n\n\nQuarto also lets you organize your files into folders, which allows for better organization of different data analyses within a project while Rmarkdown required all .rmd files be placed in the primary directory.\nRmarkdown will be maintained indefinitely; however, no new features will be developed. Quarto is the new documentation package and will continue to be developed and improved upon for the foreseeable future. All feature requests can be made here and documentation for current features can be found here\n\n\n\n\n\nAdapted from Mine Cetinkaya Rundel’s hello-quarto presentation\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation",
+    "crumbs": [
+      "Tutorial for building a website",
+      "Quarto vs. Rmarkdown"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "05_adding_page.html",
+    "href": "05_adding_page.html",
+    "title": "Adding pages to your website",
+    "section": "",
+    "text": "---\ntitle: \"The Palmer Penguins Data\"\nlightbox: true\nformat:\n  html:\n    code-tools: \n      source: true\n      toggle: true\n    code-fold: true\n---\n\n```{r}\n#| output: false\n\nsource(\"global.R\")\n```\n\n## The **palmerpenguins** package\n\nThis package contains two datasets:\n\n1.  Here, we’ll focus on a curated subset of the raw data in the package named `penguins`, which can serve as an out-of-the-box alternative to [`datasets::iris`](https://rdrr.io/r/datasets/iris.html).\n\n2.  The raw data, accessed from the [Environmental Data Initiative](https://environmentaldatainitiative.org/) (see full data citations below), is also available as [`palmerpenguins::penguins_raw`](https://allisonhorst.github.io/palmerpenguins/reference/penguins_raw.html).\n\nThe curated [`palmerpenguins::penguins`](https://allisonhorst.github.io/palmerpenguins/reference/penguins.html) dataset contains 8 variables (n = 344 penguins). You can read more about the variables by typing [`?penguins`](https://allisonhorst.github.io/palmerpenguins/reference/penguins.html).\n\n## Culmen measurements\n\nWhat are culmen length & depth? The culmen is “the upper ridge of a bird’s beak” (definition from Oxford Languages). In the simplified `penguins` subset, culmen length and depth have been updated to variables named `bill_length_mm` and `bill_depth_mm`.\n\nFor this penguin data, the bill/culmen length and depth are measured as shown below (thanks Kristen Gorman for clarifying!):\n\n![Artwork by @allison_horst](culmen_depth.png)\n\n## Installation\n\n\n```{r, echo=FALSE}\ninstall.packages(\"palmerpenguins\")\n\n```\n\n```{r}\nlibrary(palmerpenguins)\nlibrary(tidyverse)\ndata(package = 'palmerpenguins')\n```\n\n1.  load library\n2.  load palmerpenguin dataset\n\n## The Data\n\nThe [`palmerpenguins::penguins`](https://allisonhorst.github.io/palmerpenguins/reference/penguins.html) data contains 333 complete cases, with 19 missing values.\n\n```{r}\nlibrary(dplyr)\nglimpse(penguins)\n```\n\nThe [`palmerpenguins::penguins`](https://allisonhorst.github.io/palmerpenguins/reference/penguins.html) data contains 333 complete cases, with 19 missing values.\n\n```{r}\nvisdat::vis_dat(penguins)\n```\n\n\n\n\n\n\nWarning\n\n\n\nMake sure to create a global.R file with all of the packages needed for the website and to assign the data of interest.\n\n\nThis is the code that should be placed in the global.R file\n\n\nCode\nlibrary(here)\nlibrary(palmerpenguins)\nlibrary(tidyverse)    \ndata(package = 'palmerpenguins')\n\npenguins &lt;- penguins\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf you change code-fold to show then your code will default to visible but can be hidden still. If you change code-fold to true then your code will default to hidden but is visible with a click.\n\n\nContinue adding pages to the yaml and creating more pages from the penguin practice website.\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Tutorial for building a website",
+      "Adding pages to your website"
+    ]
+  }
+]

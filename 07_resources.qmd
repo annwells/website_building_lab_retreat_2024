@@ -1,0 +1,36 @@
+---
+title: "Resources"
+lightbox: true
+format:
+  html:
+    code-tools: 
+      source: true
+      toggle: true
+    code-fold: true
+---
+
+::: grid
+::: g-col-6
+## Quarto
+
+[Quarto Documentation](https://quarto.org/){target="_blank"}
+
+[Get Started with Quarto tutorial (Tom Mock)](https://jthomasmock.github.io/quarto-2hr-webinar/){target="_blank"}
+
+[Presentations with Quarto](https://quarto.org/docs/presentations/revealjs/demo/#/title-slide){target="_blank"}
+
+[Get Started with Quarto (YouTube)](https://www.youtube.com/watch?v=_f3latmOhew){target="_blank"}
+
+[Making Beautiful Presentations and Documents with Quarto (YouTube)](https://www.youtube.com/watch?v=hbf7Ai3jnxY){target="_blank"}
+
+[These are a few of my favorite things about Quarto (YouTube)](https://www.youtube.com/watch?v=ttLnLdU1-CQ){target="_blank"}
+:::
+
+::: g-col-6
+## Rmarkdown/Blogdown
+
+[Rmarkdown Documentation](https://rmarkdown.rstudio.com/){target="_blank"}
+
+[Making an Rmarkdown website](https://nceas.github.io/training-rmarkdown-website/tutorial.html){target="_blank"}
+:::
+:::

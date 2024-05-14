@@ -1,0 +1,36 @@
+---
+title: "Setting up the page yaml"
+lightbox: true
+engine: knitr
+sidebar: tutorial
+highlight-style: radical
+code-annotations: hover
+format:
+  html:
+    code-tools: 
+      source: true
+      toggle: true
+    code-fold: show
+---
+
+Each page within your website will have its own yaml information at the top. A yaml section is required, however, no line of code is necessary within the yaml. If the yaml is empty then the page will default to the specifications set in the _quarto.yml. 
+
+The page yaml can make each page's style unique. There you can specify how you visualize code, images, the table of contents, etc. Below is a simple yaml. We will create a yaml for a page later.
+
+```{yaml}
+---
+title: "The Palmer Penguins Data"
+lightbox: true #<1>
+format:
+  html:
+    code-tools: 
+      source: true #<2>
+      toggle: true #<3>
+    code-fold: true #<4>
+---
+```
+
+1. Lightbox allows you to click on any output image and it will show a larger image.
+2. source set to true will allow anyone to copy the source code for a page in the upper right corner of the page.
+3. toggle will create a dropdown menu at the top right corner for code and give options for whatever code you want to show.
+4. code-fold will allow you to show code for each output throughout your page.

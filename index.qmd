@@ -1,0 +1,74 @@
+---
+title: "Building websites for Data Dissemination, Reproducibility, and Transparency"
+engine: knitr
+highlight-style: arrow
+format:
+  html:
+    code-tools: 
+      source: true
+      toggle: true
+    page-layout: full
+---
+
+## Why should we build websites for data dissemination?
+
+1. It's easier to talk with collaborators and share results in an intuitive way.
+
+2. It's easier to understand the outcome of an experiment and organize data in a way that will be accessible years after the project is complete. 
+
+3. The websites don't require traditional biologists to understand your code but empower them to understand the steps of analysis that have been taken to arrive at an outcome creating richer discussions. 
+
+4. At the end of a project they can easily be publicly hosted for other researchers to investigate the entire analysis that was completed, not just what was presented in the accompanying journal article.
+
+**Turning qmd files:**
+
+![Artwork by @allison_horst Adapted from Mine Cetinkaya Rundel's hello-quarto presentation](many-qmd-to-output.png)
+
+**Into this:**
+
+![Example homepage of a data resource](homepage_data_resource_B6_2DG.png)
+
+## Requirements for tutorial as of 5-7-24
+
+### For RStudio
+
+1. Make sure that you have Quarto version \>1.4. 
+
+2. If you do not then download the latest version [here](https://quarto.org/docs/get-started/){target="_blank"}
+
+3. Restart RStudio
+
+4. Check the quarto version in the terminal with the following command:
+
+```{bash}
+quarto --version
+```
+
+### For Visual Studio Code
+
+
+1. Download the quarto extension [here](https://marketplace.visualstudio.com/items?itemName=quarto.quarto){target="_blank"}.
+
+2. Open Visual Studio Code
+
+3. check the Quarto version in the terminal with the following command:
+
+```{bash}
+quarto --version
+```
+
+4. Go to the quarto extension and click settings and then extension settings.
+
+5. Under **Quarto › Render: Preview Type** change the location to external.
+
+If you need help with this step feel free to contact Ann Wells for help.
+
+## Other packages that will be needed to build the practice site
+```{r}
+#| eval: false
+
+library(here)
+library(palmerpenguins)
+library(tidyverse)  
+```
+

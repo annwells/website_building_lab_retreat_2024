@@ -1,0 +1,61 @@
+project:
+  type: website
+
+website:
+  title: "Data Resource Tutorial"
+  page-navigation: true
+  back-to-top-navigation: true
+  bread-crumbs: true
+  page-footer:
+      center: Tutorial by [Ann Wells](https://ann-wells.netlify.app/), Carter Lab @ The Jackson Laboratory, 2024
+  navbar:
+    background:  "#ceb6db" #"#d1dbe8" #"#013377"
+    foreground: "#350d56"
+    logo: JAX_LOGO_no_words.png
+    left:
+      - text: "Start Here"
+        file: index.qmd
+      - text: "Tutorial for building a website"
+        href: 01_quarto_vs_rmarkdown.qmd
+      - text: "Additional Resources"
+        file: 07_resources.qmd
+    right:
+      - text: "Example Website"
+        href: http://carterdev:3838/palmer_penguins/_site
+        target: _blank
+  sidebar:
+    - title: "Tutorial for building a website"
+      style: "floating"
+      align: left
+      #background: "#ceb6db"
+      foreground: "#350d56"
+      contents:              
+        - 01_quarto_vs_rmarkdown.qmd
+        - 02_website_structure.qmd
+        - 03_navigation_bar.qmd
+        - 04_page_yaml.qmd
+        - 05_adding_page.qmd
+        - 06_hosting_website.qmd
+            
+            # - text: "Establishing the website structure"
+            #   file: docs/tutorial/02_website_structure.qmd
+            # - text: "Formatting the navigation bar"
+            #   file: docs/tutorial/03_navigation_bar.qmd
+            # - text: "Setting up the page yaml"
+            #   file: docs/tutorial/04_page_yaml.qmd
+            # - text: "Adding a page to your website"
+            #   file: docs/tutorial/05_adding_page.qmd
+
+format:
+  html:
+    theme: cerulean
+    highlight-style: textmate
+    css: styles.css
+    toc: true
+    grid:
+      sidebar-width: 300px
+      body-width: 1500px
+      margin-width: 300px
+
+editor: visual
+

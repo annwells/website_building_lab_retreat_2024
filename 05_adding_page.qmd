@@ -1,0 +1,102 @@
+---
+title: "Adding pages to your website"
+lightbox: true
+sidebar: tutorial
+highlight-style: radical
+format:
+  html:
+    code-tools: 
+      source: true
+      toggle: true
+    code-fold: show
+---
+
+````         
+---
+title: "The Palmer Penguins Data"
+lightbox: true
+format:
+  html:
+    code-tools: 
+      source: true
+      toggle: true
+    code-fold: true
+---
+
+```{{r}}
+#| output: false
+
+source("global.R")
+```
+
+## The **palmerpenguins** package
+
+This package contains two datasets:
+
+1.  Here, we’ll focus on a curated subset of the raw data in the package named `penguins`, which can serve as an out-of-the-box alternative to [`datasets::iris`](https://rdrr.io/r/datasets/iris.html).
+
+2.  The raw data, accessed from the [Environmental Data Initiative](https://environmentaldatainitiative.org/) (see full data citations below), is also available as [`palmerpenguins::penguins_raw`](https://allisonhorst.github.io/palmerpenguins/reference/penguins_raw.html).
+
+The curated [`palmerpenguins::penguins`](https://allisonhorst.github.io/palmerpenguins/reference/penguins.html) dataset contains 8 variables (n = 344 penguins). You can read more about the variables by typing [`?penguins`](https://allisonhorst.github.io/palmerpenguins/reference/penguins.html).
+
+## Culmen measurements
+
+What are culmen length & depth? The culmen is “the upper ridge of a bird’s beak” (definition from Oxford Languages). In the simplified `penguins` subset, culmen length and depth have been updated to variables named `bill_length_mm` and `bill_depth_mm`.
+
+For this penguin data, the bill/culmen length and depth are measured as shown below (thanks Kristen Gorman for clarifying!):
+
+![Artwork by @allison_horst](culmen_depth.png)
+
+## Installation
+
+
+```{{r, echo=FALSE}}
+install.packages("palmerpenguins")
+
+```
+
+```{{r}}
+library(palmerpenguins) # <1>
+library(tidyverse)    # <1>
+data(package = 'palmerpenguins') # <2>
+```
+
+1.  load library
+2.  load palmerpenguin dataset
+
+## The Data
+
+The [`palmerpenguins::penguins`](https://allisonhorst.github.io/palmerpenguins/reference/penguins.html) data contains 333 complete cases, with 19 missing values.
+
+```{{r}}
+library(dplyr)
+glimpse(penguins)
+```
+
+The [`palmerpenguins::penguins`](https://allisonhorst.github.io/palmerpenguins/reference/penguins.html) data contains 333 complete cases, with 19 missing values.
+
+```{{r}}
+visdat::vis_dat(penguins)
+```
+````
+::: {.callout-warning}
+Make sure to create a global.R file with all of the packages needed for the website and to assign the data of interest.
+:::
+
+This is the code that should be placed in the global.R file
+
+```{r}
+#| eval: false
+library(here)
+library(palmerpenguins)
+library(tidyverse)    
+data(package = 'palmerpenguins')
+
+penguins <- penguins
+```
+
+::: callout-note
+If you change code-fold to show then your code will default to visible but can be hidden still. If you change code-fold to true then your code will default to hidden but is visible with a click.
+:::
+
+Continue adding pages to the yaml and creating more pages from the penguin practice website.
