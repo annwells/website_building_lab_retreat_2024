@@ -30,7 +30,7 @@ echo scp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername
 
 To access the site you will use the following url:
 
-http://carterdev:3838/foldername/_site
+http://carterdev.jax.org:3838/foldername/_site
 
 where foldername correpsonds to your project name.
 

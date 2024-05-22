@@ -32,7 +32,7 @@ website:
             href: https://github.com/annwells/quarto_JAX_template
             target: _blank
       - text: "Example Website"
-        href: http://carterdev:3838/palmer_penguins/_site
+        href: http://carterdev.jax.org:3838/palmer_penguins/_site
         target: _blank
   sidebar:
     - title: "Tutorial for building a website"

@@ -15,7 +15,7 @@
     "href": "06_hosting_website.html",
     "title": "Hosting Your Website",
     "section": "",
-    "text": "Hosting on the carterdev server is great for internal projects but requires vpn access. To do this follow these steps:\n1. Go to terminal in your RStudio or VScode IDE.\n2. Copy over _site folder using this command:\n\n\nCode\n## remove echo if copying code\necho scp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\nscp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\n3. push enter and you will be asked to enter your password. This is your JAX password.\n4. Files should start copying over and you’re done!\nTo access the site you will use the following url:\nhttp://carterdev:3838/foldername/_site\nwhere foldername correpsonds to your project name.",
+    "text": "Hosting on the carterdev server is great for internal projects but requires vpn access. To do this follow these steps:\n1. Go to terminal in your RStudio or VScode IDE.\n2. Copy over _site folder using this command:\n\n\nCode\n## remove echo if copying code\necho scp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\nscp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\n3. push enter and you will be asked to enter your password. This is your JAX password.\n4. Files should start copying over and you’re done!\nTo access the site you will use the following url:\nhttp://carterdev.jax.org:3838/foldername/_site\nwhere foldername correpsonds to your project name.",
     "crumbs": [
       "Tutorial for building a website",
       "Hosting Your Website"
@@ -26,7 +26,7 @@
     "href": "06_hosting_website.html#hosting-on-carterdev-server",
     "title": "Hosting Your Website",
     "section": "",
-    "text": "Hosting on the carterdev server is great for internal projects but requires vpn access. To do this follow these steps:\n1. Go to terminal in your RStudio or VScode IDE.\n2. Copy over _site folder using this command:\n\n\nCode\n## remove echo if copying code\necho scp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\nscp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\n3. push enter and you will be asked to enter your password. This is your JAX password.\n4. Files should start copying over and you’re done!\nTo access the site you will use the following url:\nhttp://carterdev:3838/foldername/_site\nwhere foldername correpsonds to your project name.",
+    "text": "Hosting on the carterdev server is great for internal projects but requires vpn access. To do this follow these steps:\n1. Go to terminal in your RStudio or VScode IDE.\n2. Copy over _site folder using this command:\n\n\nCode\n## remove echo if copying code\necho scp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\nscp -r _site shortname@carterdev.jax.org:/srv/shiny-server/foldername\n\n\n3. push enter and you will be asked to enter your password. This is your JAX password.\n4. Files should start copying over and you’re done!\nTo access the site you will use the following url:\nhttp://carterdev.jax.org:3838/foldername/_site\nwhere foldername correpsonds to your project name.",
     "crumbs": [
       "Tutorial for building a website",
       "Hosting Your Website"
