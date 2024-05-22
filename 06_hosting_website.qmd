@@ -3,12 +3,13 @@ title: "Hosting Your Website"
 lightbox: true
 engine: knitr
 sidebar: tutorial
+highlight-style: radical
 format:
   html:
     code-tools: 
       source: true
       toggle: true
-    code-fold: true
+    code-fold: show
 ---
 
 ## Hosting on Carterdev server
