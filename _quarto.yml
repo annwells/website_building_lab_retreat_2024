@@ -20,6 +20,17 @@ website:
       - text: "Additional Resources"
         file: 07_resources.qmd
     right:
+      - icon: github
+        menu:
+          - text: Tutorial code
+            href:  https://github.com/annwells/website_building_lab_retreat_2024
+            target: _blank
+          - text: Penguin example code
+            href:  https://github.com/annwells/Penguins_practice_website/tree/master
+            target: _blank
+          - text: Template with JAX logo
+            href: https://github.com/annwells/quarto_JAX_template
+            target: _blank
       - text: "Example Website"
         href: http://carterdev:3838/palmer_penguins/_site
         target: _blank
