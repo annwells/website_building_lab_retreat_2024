@@ -69,14 +69,14 @@
     "href": "index.html",
     "title": "Building websites for Data Dissemination, Reproducibility, and Transparency",
     "section": "",
-    "text": "It’s easier to talk with collaborators and share results in an intuitive way.\nIt’s easier to understand the outcome of an experiment and organize data in a way that will be accessible years after the project is complete.\nThe websites don’t require traditional biologists to understand your code but empower them to understand the steps of analysis that have been taken to arrive at an outcome creating richer discussions.\nAt the end of a project they can easily be publicly hosted for other researchers to investigate the entire analysis that was completed, not just what was presented in the accompanying journal article.\n\nTurning qmd files:\n\n\n\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation\n\n\nInto this:\n\n\n\nExample homepage of a data resource"
+    "text": "Start Here"
   },
   {
     "objectID": "index.html#why-should-we-build-websites-for-data-dissemination",
     "href": "index.html#why-should-we-build-websites-for-data-dissemination",
     "title": "Building websites for Data Dissemination, Reproducibility, and Transparency",
-    "section": "",
-    "text": "It’s easier to talk with collaborators and share results in an intuitive way.\nIt’s easier to understand the outcome of an experiment and organize data in a way that will be accessible years after the project is complete.\nThe websites don’t require traditional biologists to understand your code but empower them to understand the steps of analysis that have been taken to arrive at an outcome creating richer discussions.\nAt the end of a project they can easily be publicly hosted for other researchers to investigate the entire analysis that was completed, not just what was presented in the accompanying journal article.\n\nTurning qmd files:\n\n\n\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation\n\n\nInto this:\n\n\n\nExample homepage of a data resource"
+    "section": "Why should we build websites for data dissemination?",
+    "text": "Why should we build websites for data dissemination?\n\nIt’s easier to talk with collaborators and share results in an intuitive way.\nIt’s easier to understand the outcome of an experiment and organize data in a way that will be accessible years after the project is complete.\nThe websites don’t require traditional biologists to understand your code but empower them to understand the steps of analysis that have been taken to arrive at an outcome creating richer discussions.\nAt the end of a project they can easily be publicly hosted for other researchers to investigate the entire analysis that was completed, not just what was presented in the accompanying journal article.\n\nTurning qmd files:\n\n\n\nArtwork by @allison_horst Adapted from Mine Cetinkaya Rundel’s hello-quarto presentation\n\n\nInto this:\n\n\n\nExample homepage of a data resource"
   },
   {
     "objectID": "index.html#requirements-for-tutorial-as-of-5-7-24",

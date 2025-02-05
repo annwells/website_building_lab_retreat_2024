@@ -10,6 +10,10 @@ format:
     page-layout: full
 ---
 
+```{=HTML}
+<a href="./index.html">Start Here</a>
+```
+
 ## Why should we build websites for data dissemination?
 
 1. It's easier to talk with collaborators and share results in an intuitive way.

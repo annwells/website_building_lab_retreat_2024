@@ -7,11 +7,12 @@ website:
   back-to-top-navigation: true
   bread-crumbs: true
   page-footer:
-      center: Tutorial by [Ann Wells](https://ann-wells.netlify.app/), Carter Lab @ The Jackson Laboratory, 2024
+      center: Tutorial by [Ann Wells](https://annwellsphd.com/), Carter Lab @ The Jackson Laboratory, 2024
   navbar:
     background:  "#ceb6db" #"#d1dbe8" #"#013377"
     foreground: "#350d56"
     logo: JAX_LOGO_no_words.png
+    logo-href: "./index.html"
     left:
       - text: "Start Here"
         file: index.qmd
@@ -32,7 +33,7 @@ website:
             href: https://github.com/annwells/quarto_JAX_template
             target: _blank
       - text: "Example Website"
-        href: http://carterdev.jax.org:3838/palmer_penguins/_site
+        href: https://penguinexamplesite.netlify.app/
         target: _blank
   sidebar:
     - title: "Tutorial for building a website"
